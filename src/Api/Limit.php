@@ -3,6 +3,7 @@
 namespace Ebay\Developer\Anlaytics\Api;
 
 use Ebay\Developer\Anlaytics\Model\RateLimitsResponse;
+use OpenAPI\Runtime\UnexpectedResponse;
 
 class Limit extends AbstractAPI
 {
@@ -28,7 +29,7 @@ class Limit extends AbstractAPI
      *                       only the APIs specified. Example values are browse for the Buy APIs context,
      *                       inventory for the Sell APIs context, and taxonomy for the Commerce APIs context.
      *
-     * @return RateLimitsResponse|object
+     * @return RateLimitsResponse|object|UnexpectedResponse
      */
     public function gets(array $queries = [])
     {
